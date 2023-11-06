@@ -1,0 +1,17 @@
+<h1>Archivos en {{ seccion }}</h1>
+  <!-- Botón para volver a "subir.html" -->
+  <button onclick="regresarASubir()">Volver al inicio</button>
+
+  <script>
+    function regresarASubir() {
+      // Redirigir a la página "subir.html"
+      window.location.href = "/subir";
+    }
+  </script>
+<ul>
+  {% for archivo in archivos %}
+    <li><a href="{{ url_for('descargar', seccion=seccion, archivo=archivo) }}">{{ archivo }}</a></li>
+  {% endfor %}
+
+
+</ul>

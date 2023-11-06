@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+  <title>Recordatorios Programados</title>
+</head>
+
+<body>
+  <h1>Recordatorios Programados</h1>
+  <!-- Botón para volver a "subir.html" -->
+<button onclick="regresarASubir()">Volver al inicio</button>
+
+<script>
+  function regresarASubir() {
+    // Redirigir a la página "subir.html"
+    window.location.href = "/subir";
+  }
+</script>
+<ul>
+  {% for recordatorio in recordatorios %}
+    <li>
+      Asunto: {{ recordatorio.asunto }}
+      <span class="mostrar-alarma" data-asunto="{{ recordatorio.asunto }}" data-segundos-hasta-alarma="{{ recordatorio.segundos_hasta_alarma }}">
+        Alarma en: {{ recordatorio.segundos_hasta_alarma }} segundos
+      </span>
+    </li>
+  {% endfor %}
+</ul>
+
+  
+</body>
+</html>

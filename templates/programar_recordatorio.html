@@ -1,0 +1,19 @@
+<h1>Programar recordatorio</h1>
+<!-- Formulario con un evento "onsubmit" para mostrar la ventana emergente -->
+<form method="POST" action="/programar-recordatorio" >
+  <input type="text" name="asunto" placeholder="Asunto del recordatorio">
+  <input type="text" name="destinatario" placeholder="Correo del destinatario">
+  <input type="date" name="fecha">
+  <input type="time" name="hora">
+  <input type="submit" value="Programar Recordatorio">
+</form>
+
+<!-- Botón para volver a "subir.html" -->
+<button onclick="regresarASubir()">Volver al inicio</button>
+
+<script>
+  function regresarASubir() {
+    // Redirigir a la página "subir.html"
+    window.location.href = "/subir";
+  }
+</script>
