@@ -1,5 +1,6 @@
 import os
 import smtplib
+from flask_mail import Mail, Message
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from email.mime.application import MIMEApplication
@@ -12,9 +13,18 @@ from flask_sse import sse
 from apscheduler.jobstores.base import JobLookupError
 from flask import redirect, request
 from flask import render_template_string
+from decouple import config
 
 app = Flask(__name__)
 app.config["REDIS_URL"] = "redis://localhost"  # Asegúrate de que Redis esté en ejecución y configurado
+app.config['MAIL_SERVER'] = 'tu_servidor_smtp.com'
+app.config['MAIL_PORT'] = 587
+app.config['MAIL_USE_TLS'] = True
+app.config['MAIL_USERNAME'] = config('MAIL_USERNAME')
+app.config['MAIL_PASSWORD'] = config('MAIL_PASSWORD')
+
+mail = Mail(app)
+
 
 utc = pytz.utc
 
@@ -28,26 +38,12 @@ recordatorios_programados = []
 
 # Función para enviar correos
 def enviar_correo(asunto, destinatario, cuerpo):
-    smtp_server = 'smtp.live.com'  # Cambia a tu servidor SMTP
-    smtp_port = 587  # Cambia al puerto de tu servidor SMTP
-    smtp_user = 'ernestocortinas@hotmail.com'  # Cambia a tu usuario SMTP
-    smtp_password = 'neto129'  # Cambia a tu contraseña SMTP
-
-    msg = MIMEMultipart()
-    msg['From'] = smtp_user
-    msg['To'] = destinatario
-    msg['Subject'] = asunto
-
-    msg.attach(MIMEText(cuerpo, 'plain'))
-
-    server = smtplib.SMTP(smtp_server, smtp_port)
-    server.starttls()
-    server.login(smtp_user, smtp_password)
-
-    text = msg.as_string()
-    server.sendmail(smtp_user, destinatario, text)
-
-    server.quit()
+   msg = Message("Asunto del Correo", sender="tu_direccion_de_correo@gmail.com", recipients=["destinatario@example.com"])
+   msg.body = "Contenido del correo"
+    
+   mail.send(msg)
+    
+   return "Correo enviado!"
 
 # Definir la función recordatorio
 def recordatorio(asunto, segundos_hasta_alarma, destinatario, app):
@@ -148,4 +144,5 @@ def mostrar_recordatorios():
 
 if __name__ == '__main__':
     app.secret_key = 'super_secret_key'
+    app.register_blueprint(sse, url_prefix='/stream')  # Registra la extensión de SSE
     app.run(debug=True)

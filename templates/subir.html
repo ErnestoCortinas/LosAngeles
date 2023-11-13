@@ -1,15 +1,20 @@
 <!doctype html>
 <html>
-<head>
-  <title>Subir Archivo PDF</title>
-</head>
-<body>
-  <h1>Subir Archivo PDF</h1>  <a href="{{ url_for('nuevo_recordatorio') }}">Programar Recordatorio</a>
-    <a href="{{ url_for('mostrar_recordatorios') }}">Ver Recordatorios</a>
 
-  <form method="POST" action="/subir" enctype="multipart/form-data">
-    <input type="file" name="archivo" accept=".pdf">
-    <select name="seccion">
+<head>
+    <title>Subir Archivo PDF</title>
+</head>
+
+<body>
+    <h1>Subir Archivo PDF</h1>
+    <button style="padding: 10px 15px; font-size: 16px; cursor: pointer; background-color: #4CAF50; color: white; border: none; border-radius: 5px;" onclick="window.location.href='{{ url_for('nuevo_recordatorio') }}'">Programar Recordatorio</button>
+    <button style="padding: 10px 15px; font-size: 16px; cursor: pointer; background-color: #4CAF50; color: white; border: none; border-radius: 5px;" onclick="window.location.href='{{ url_for('mostrar_recordatorios') }}'">Ver Recordatorios</button>
+
+
+
+    <form method="POST" action="/subir" enctype="multipart/form-data">
+        <input type="file" name="archivo" accept=".pdf">
+        <select name="seccion">
       
       <option value="seccion1">Sección 1</option>
       <option value="seccion2">Sección 2</option>
@@ -26,29 +31,33 @@
       
       <!-- Agrega más opciones de sección según tus necesidades -->
     </select>
-    <input type="submit" value="Subir">
-  </form>
-  <ul>
+        <input type="submit" value="Subir">
+    </form>
+    <ul>
 
-    <h1>CRE</h1>
-    <li><a href="/ver/seccion1">Ver archivos en Sección 1</a></li>
-    
-    <hr style= "color:#000000; background-color: #0f0f0f; height: 5px;">
-    <li><a href="/ver/seccion2">Ver archivos en Sección 2</a></li>
-    <!-- Agrega más enlaces según tus necesidades -->
-  </ul>
+        <h1>CRE</h1>
+        <li><a style="display: inline-block; padding:9px; font-size: 16px; text-align: center; text-decoration: none; cursor: pointer; background-color: #6495ed; color: white; border:none;
+    border-radius: 10px;" class="boton" href="/ver/seccion1">Ver archivos en Sección 1</a></li>
 
-  <script src="https://cdn.rawgit.com/Yaffle/EventSource/2.0.1/eventsource.js"></script> <!-- Agrega el script de EventSource -->
+        <hr style="color:#000000; background-color: #0f0f0f; height: 5px;">
+        <li><a style="display: inline-block; padding:9px; font-size: 16px; text-align: center; text-decoration: none; cursor: pointer; background-color: #ff8c00; color: white; border: none;
+    border-radius: 10px;" class="boton" href="/ver/seccion2">Ver archivos en Sección 2</a></li>
+        <!-- Agrega más enlaces según tus necesidades -->
+    </ul>
 
-<script>
-  const eventSource = new EventSource('/stream');  // Conéctate al servidor SSE
+    <script src="https://cdn.rawgit.com/Yaffle/EventSource/2.0.1/eventsource.js"></script>
+    <!-- Agrega el script de EventSource -->
 
-  eventSource.onmessage = function (event) {
-    const notification = JSON.parse(event.data);
-    // Maneja la notificación, por ejemplo, muestra un mensaje en la interfaz
-    console.log(notification.message);
-  };
-</script>
+    <script>
+        const eventSource = new EventSource('/stream'); // Conéctate al servidor SSE
+
+        eventSource.onmessage = function(event) {
+            const notification = JSON.parse(event.data);
+            // Maneja la notificación, por ejemplo, muestra un mensaje en la interfaz
+            console.log(notification.message);
+        };
+    </script>
 
 </body>
+
 </html>
