@@ -7,8 +7,11 @@
 
 <body>
     <h1>Subir Archivo PDF</h1>
-    <button style="padding: 10px 15px; font-size: 16px; cursor: pointer; background-color: #4CAF50; color: white; border: none; border-radius: 5px;" onclick="window.location.href='{{ url_for('nuevo_recordatorio') }}'">Programar Recordatorio</button>
-    <button style="padding: 10px 15px; font-size: 16px; cursor: pointer; background-color: #4CAF50; color: white; border: none; border-radius: 5px;" onclick="window.location.href='{{ url_for('mostrar_recordatorios') }}'">Ver Recordatorios</button>
+    <button style="padding: 10px 15px; font-size: 16px; cursor: pointer; background-color: #4CAF50; 
+    color: white; border: none; border-radius: 5px;" onclick="window.location.href='{{ url_for('nuevo_recordatorio') }}'">Programar Recordatorio</button>
+
+    <button style="padding: 10px 15px; font-size: 16px; cursor: pointer; background-color: #4CAF50; 
+    color: white; border: none; border-radius: 5px;" onclick="window.location.href='{{ url_for('mostrar_recordatorios') }}'">Ver Recordatorios</button>
 
 
 
@@ -36,12 +39,144 @@
     <ul>
 
         <h1>CRE</h1>
-        <li><a style="display: inline-block; padding:9px; font-size: 16px; text-align: center; text-decoration: none; cursor: pointer; background-color: #6495ed; color: white; border:none;
-    border-radius: 10px;" class="boton" href="/ver/seccion1">Ver archivos en Sección 1</a></li>
+        <ol>
+            <li><a style="display: inline-block; padding:9px; font-size: 16px; text-align: center; text-decoration: none; cursor: pointer; background-color: #6495ed; color: white; border:none;
+    border-radius: 10px;" class="boton" href="/ver/seccion1">Permiso CRE</a></li>
+            <ul>
+                <li><a style="display: inline-block; padding:9px; font-size: 16px; text-align: center; text-decoration: none; cursor: pointer; background-color: #6495ed; color: white; border:none;
+            border-radius: 10px;" class="boton" href="/ver/seccion1">Actualizaciones/Modificaciones al permiso</a></li>
+            </ul>
+            <li><a style="display: inline-block; padding:9px; font-size: 16px; text-align: center; text-decoration: none; cursor: pointer; background-color: #6495ed; color: white; border:none;
+        border-radius: 10px;" class="boton" href="/ver/seccion1">Plano Conjunto Estación de servicio (A-1)</a></li>
+            <li><a style="display: inline-block; padding:9px; font-size: 16px; text-align: center; text-decoration: none; cursor: pointer; background-color: #6495ed; color: white; border:none;
+            border-radius: 10px;" class="boton" href="/ver/seccion1">Tira de la Consola de Telemedición</a></li>
+            <li><a style="display: inline-block; padding:9px; font-size: 16px; text-align: center; text-decoration: none; cursor: pointer; background-color: #6495ed; color: white; border:none;
+                border-radius: 10px;" class="boton" href="/ver/seccion1">Póliza de seguros (vigente)</a></li>
+            <li><a style="display: inline-block; padding:9px; font-size: 16px; text-align: center; text-decoration: none; cursor: pointer; background-color: #6495ed; color: white; border:none;
+                    border-radius: 10px;" class="boton" href="/ver/seccion1">Plan de contingencias (Letrero externo, fotografía)</a></li>
+            <li><a style="display: inline-block; padding:9px; font-size: 16px; text-align: center; text-decoration: none; cursor: pointer; background-color: #6495ed; color: white; border:none;
+                        border-radius: 10px;" class="boton" href="/ver/seccion1">Letrero de Piso con teléfonos y/o correo para quejas y sugerencias (Fotografía)</a></li>
+            <li><a style="display: inline-block; padding:9px; font-size: 16px; text-align: center; text-decoration: none; cursor: pointer; background-color: #6495ed; color: white; border:none;
+                            border-radius: 10px;" class="boton" href="/ver/seccion1">Pago de supervisión anual (ACUERDO Núm. A/035/2018</a></li>
+            <li><a style="display: inline-block; padding:9px; font-size: 16px; text-align: center; text-decoration: none; cursor: pointer; background-color: #6495ed; color: white; border:none;
+                                border-radius: 10px;" class="boton" href="/ver/seccion1">Informe de la calidad de los productos</a></li>
+            <li><a style="display: inline-block; padding:9px; font-size: 16px; text-align: center; text-decoration: none; cursor: pointer; background-color: #6495ed; color: white; border:none;
+                                    border-radius: 10px;" class="boton" href="/ver/seccion1">Dictamen de la calidad de los productos NOM-016-CRE-2016</a></li>
+            <li><a style="display: inline-block; padding:9px; font-size: 16px; text-align: center; text-decoration: none; cursor: pointer; background-color: #6495ed; color: white; border:none;
+                                        border-radius: 10px;" class="boton" href="/ver/seccion1">Informe de resultados de las especificaciones de la calidad de los petrolíferos, entregados por Almacenista, transportista o distribuidor (correspondientes a 2019 y a la fecha actual).</a></li>
+            <li><a style="display: inline-block; padding:9px; font-size: 16px; text-align: center; text-decoration: none; cursor: pointer; background-color: #6495ed; color: white; border:none;
+                                            border-radius: 10px;" class="boton" href="/ver/seccion1">Manual del sistema de Gestión de la medición (SGM)</a></li>
+            <li><a style="display: inline-block; padding:9px; font-size: 16px; text-align: center; text-decoration: none; cursor: pointer; background-color: #6495ed; color: white; border:none;
+                                                border-radius: 10px;" class="boton" href="/ver/seccion1">Acuse de cambio de precios CRE</a></li>
+            <li><a style="display: inline-block; padding:9px; font-size: 16px; text-align: center; text-decoration: none; cursor: pointer; background-color: #6495ed; color: white; border:none;
+                                                    border-radius: 10px;" class="boton" href="/ver/seccion1">Acuse de cambio Reporte diario CRE</a></li>
+            <li><a style="display: inline-block; padding:9px; font-size: 16px; text-align: center; text-decoration: none; cursor: pointer; background-color: #6495ed; color: white; border:none;
+                                                        border-radius: 10px;" class="boton" href="/ver/seccion1">Acuse Reporte Anual CRE</a></li>
+            <li><a style="display: inline-block; padding:9px; font-size: 16px; text-align: center; text-decoration: none; cursor: pointer; background-color: #6495ed; color: white; border:none;
+                                                            border-radius: 10px;" class="boton" href="/ver/seccion1">Acuse Reporte Estructura Accionaria CRE</a></li>
+            <li><a style="display: inline-block; padding:9px; font-size: 16px; text-align: center; text-decoration: none; cursor: pointer; background-color: #6495ed; color: white; border:none;
+                                                                border-radius: 10px;" class="boton" href="/ver/seccion1">Documento que acredite la adquisición y procedencia ilicita de los petrolíferos.</a></li>
+            <li><a style="display: inline-block; padding:9px; font-size: 16px; text-align: center; text-decoration: none; cursor: pointer; background-color: #6495ed; color: white; border:none;
+                                                                    border-radius: 10px;" class="boton" href="/ver/seccion1">Ver archivos en Sección 1</a></li>
+        </ol>
+        <hr style="color:#000000; background-color: #0f0f0f; height: 5px;">
+
+
+        <h1>PROFECO</h1>
+        <ol>
+            <li><a style="display: inline-block; padding:9px; font-size: 16px; text-align: center; text-decoration: none; cursor: pointer; background-color: #ff8c00; color: white; border: none;
+    border-radius: 10px;" class="boton" href="/ver/seccion2">Permiso CRE</a></li>
+
+            <li><a style="display: inline-block; padding:9px; font-size: 16px; text-align: center; text-decoration: none; cursor: pointer; background-color: #ff8c00; color: white; border: none;
+        border-radius: 10px;" class="boton" href="/ver/seccion2">Aprobación de modelos prototipos de los dispensarios (NOM-005.SCFI-2017)</a></li>
+            <li><a style="display: inline-block; padding:9px; font-size: 16px; text-align: center; text-decoration: none; cursor: pointer; background-color: #ff8c00; color: white; border: none;
+            border-radius: 10px;" class="boton" href="/ver/seccion2">Factura de los dispensarios y consola de telemedición</a></li>
+            <li><a style="display: inline-block; padding:9px; font-size: 16px; text-align: center; text-decoration: none; cursor: pointer; background-color: #ff8c00; color: white; border: none;
+                border-radius: 10px;" class="boton" href="/ver/seccion2">Calibración de dispensarios (vigente)</a></li>
+            <li><a style="display: inline-block; padding:9px; font-size: 16px; text-align: center; text-decoration: none; cursor: pointer; background-color: #ff8c00; color: white; border: none;
+                    border-radius: 10px;" class="boton" href="/ver/seccion2">Aviso control a distancia</a></li>
+            <li><a style="display: inline-block; padding:9px; font-size: 16px; text-align: center; text-decoration: none; cursor: pointer; background-color: #ff8c00; color: white; border: none;
+                        border-radius: 10px;" class="boton" href="/ver/seccion2">Última revisión realizada por PROFECO</a></li>
+            <li><a style="display: inline-block; padding:9px; font-size: 16px; text-align: center; text-decoration: none; cursor: pointer; background-color: #ff8c00; color: white; border: none;
+                            border-radius: 10px;" class="boton" href="/ver/seccion2">Informe de la calidad de los productos (primer y sgeundo semestre del año en curso)</a></li>
+            <li><a style="display: inline-block; padding:9px; font-size: 16px; text-align: center; text-decoration: none; cursor: pointer; background-color: #ff8c00; color: white; border: none;
+                                border-radius: 10px;" class="boton" href="/ver/seccion2">Dictamen de la calidad de los productos NOM-016-CRE-2016</a></li>
+            <li><a style="display: inline-block; padding:9px; font-size: 16px; text-align: center; text-decoration: none; cursor: pointer; background-color: #ff8c00; color: white; border: none;
+                                    border-radius: 10px;" class="boton" href="/ver/seccion2">Certificado de Inocuidad (Autorización del CENAM del control volumetrico)(NOM-185-SCFI-2017)</a></li>
+            <li><a style="display: inline-block; padding:9px; font-size: 16px; text-align: center; text-decoration: none; cursor: pointer; background-color: #ff8c00; color: white; border: none;
+                                        border-radius: 10px;" class="boton" href="/ver/seccion2">Constancia de Situación Fiscal (SAT)</a></li>
+            <li><a style="display: inline-block; padding:9px; font-size: 16px; text-align: center; text-decoration: none; cursor: pointer; background-color: #ff8c00; color: white; border: none;
+                                            border-radius: 10px;" class="boton" href="/ver/seccion2">Acuse del ultimo "Cambio de precio"</a></li>
+            <li><a style="display: inline-block; padding:9px; font-size: 16px; text-align: center; text-decoration: none; cursor: pointer; background-color: #ff8c00; color: white; border: none;
+                                                border-radius: 10px;" class="boton" href="/ver/seccion2">Bitácora PROFECO (Apertura de puertas)</a></li>
+            <li><a style="display: inline-block; padding:9px; font-size: 16px; text-align: center; text-decoration: none; cursor: pointer; background-color: #ff8c00; color: white; border: none;
+                                                    border-radius: 10px;" class="boton" href="/ver/seccion2">Manual Consola de monitoreo</a></li>
+            <li><a style="display: inline-block; padding:9px; font-size: 16px; text-align: center; text-decoration: none; cursor: pointer; background-color: #ff8c00; color: white; border: none;
+                                                        border-radius: 10px;" class="boton" href="/ver/seccion2">Cambio de Dispensarios o Actualización</a></li>
+        </ol>
 
         <hr style="color:#000000; background-color: #0f0f0f; height: 5px;">
-        <li><a style="display: inline-block; padding:9px; font-size: 16px; text-align: center; text-decoration: none; cursor: pointer; background-color: #ff8c00; color: white; border: none;
-    border-radius: 10px;" class="boton" href="/ver/seccion2">Ver archivos en Sección 2</a></li>
+
+        <h1>ASEA</h1>
+        <ol>
+            <li><a style="display: inline-block; padding:9px; font-size: 16px; text-align: center; text-decoration: none; cursor: pointer; background-color: #00FF7F; color: white; border: none;
+            border-radius: 10px;" class="boton" href="/ver/seccion2">Dictamen Tecnico de Diseño (NOM-005-ASEA-2016, Numeral 9.1)</a></li>
+            <li><a style="display: inline-block; padding:9px; font-size: 16px; text-align: center; text-decoration: none; cursor: pointer; background-color: #00FF7F; color: white; border: none;
+                border-radius: 10px;" class="boton" href="/ver/seccion2">Dictamen Técnico de Construcción (NOM-005-ASEA-2016, Numeral 9.2)</a></li>
+            <li><a style="display: inline-block; padding:9px; font-size: 16px; text-align: center; text-decoration: none; cursor: pointer; background-color: #00FF7F; color: white; border: none;
+                    border-radius: 10px;" class="boton" href="/ver/seccion2">Pruebas de Hermeticidad (NOM-005-ASEA-2016, Numeral 8,.10.1)</a></li>
+            <li><a style="display: inline-block; padding:9px; font-size: 16px; text-align: center; text-decoration: none; cursor: pointer; background-color: #00FF7F; color: white; border: none;
+                        border-radius: 10px;" class="boton" href="/ver/seccion2">Plano Conjunto Estación de Servicio (A-1) (NOM-005-ASEA-2016, Anexo 3, Numeral 5.2)</a></li>
+            <li><a style="display: inline-block; padding:9px; font-size: 16px; text-align: center; text-decoration: none; cursor: pointer; background-color: #00FF7F; color: white; border: none;
+                            border-radius: 10px;" class="boton" href="/ver/seccion2">Permiso CRE (NOM-005-ASEA-2016, Segundo)</a></li>
+            <li><a style="display: inline-block; padding:9px; font-size: 16px; text-align: center; text-decoration: none; cursor: pointer; background-color: #00FF7F; color: white; border: none;
+                                border-radius: 10px;" class="boton" href="/ver/seccion2">Dictamen Técnico de Operación y Mantenimiento (NOm-005-ASEA-2016, Numeral 9.3)</a></li>
+            <li><a style="display: inline-block; padding:9px; font-size: 16px; text-align: center; text-decoration: none; cursor: pointer; background-color: #00FF7F; color: white; border: none;
+                                    border-radius: 10px;" class="boton" href="/ver/seccion2">Certificado de Limpiezas ecologicas (NOM-005-ASEA-2016, Numeral 8.19.5)</a></li>
+            <li><a style="display: inline-block; padding:9px; font-size: 16px; text-align: center; text-decoration: none; cursor: pointer; background-color: #00FF7F; color: white; border: none;
+                                        border-radius: 10px;" class="boton" href="/ver/seccion2">Manifiesto de Recolección de Residuos (NOM-005-ASEA-2016, Numeral 8.19.5)</a></li>
+            <li><a style="display: inline-block; padding:9px; font-size: 16px; text-align: center; text-decoration: none; cursor: pointer; background-color: #00FF7F; color: white; border: none;
+                                            border-radius: 10px;" class="boton" href="/ver/seccion2">Autorización en Materia Ambiental (IP/MIA)(LGEPPA)</a></li>
+            <li><a style="display: inline-block; padding:9px; font-size: 16px; text-align: center; text-decoration: none; cursor: pointer; background-color: #00FF7F; color: white; border: none;
+                                                border-radius: 10px;" class="boton" href="/ver/seccion2">Análisis de Riesgo (AR) (NOM-005-ASEA-2016, Numeral 8.19.5)</a></li>
+            <li><a style="display: inline-block; padding:9px; font-size: 16px; text-align: center; text-decoration: none; cursor: pointer; background-color: #00FF7F; color: white; border: none;
+                                                    border-radius: 10px;" class="boton" href="/ver/seccion2">Registro Generador de Residuos Peligrosos (RGRP) (Gestión ambiental Anexo 4)</a></li>
+            <li><a style="display: inline-block; padding:9px; font-size: 16px; text-align: center; text-decoration: none; cursor: pointer; background-color: #00FF7F; color: white; border: none;
+                                                        border-radius: 10px;" class="boton" href="/ver/seccion2">Licencia Ambiental Única o Licencia de Funcionamiento(Artículo 6° facción IX del Reglamento de la Ley General de Equilibrio Ecológico y la Protección al Ambiente en Materia de Prevención y Control de Contaminación de la Atmósfera)</a></li>
+            <li><a style="display: inline-block; padding:9px; font-size: 16px; text-align: center; text-decoration: none; cursor: pointer; background-color: #00FF7F; color: white; border: none;
+                                                            border-radius: 10px;" class="boton" href="/ver/seccion2">Cedula de operación Anual(COA)(Reglamento de la Ley General de cambio climático en materia de Registro NAcional de Emisores (RENE))</a></li>
+            <li><a style="display: inline-block; padding:9px; font-size: 16px; text-align: center; text-decoration: none; cursor: pointer; background-color: #00FF7F; color: white; border: none;
+                                                                border-radius: 10px;" class="boton" href="/ver/seccion2">SASISOPA (Ley de la Agencia Nacional de Seguridad Industrial y de Protección al Medio Ambiente del Sector de Hidrocarburos, Art.5)</li>
+            <li><a style="display: inline-block; padding:9px; font-size: 16px; text-align: center; text-decoration: none; cursor: pointer; background-color: #00FF7F; color: white; border: none;
+                                                                    border-radius: 10px;" class="boton" href="/ver/seccion2">Protocolo de respuesta a emergencia (PRE) (ASEA-01-011-A, ASEA-01-012-A)</a></li>
+            <li><a style="display: inline-block; padding:9px; font-size: 16px; text-align: center; text-decoration: none; cursor: pointer; background-color: #00FF7F; color: white; border: none;
+                                                                        border-radius: 10px;" class="boton" href="/ver/seccion2">Póliza de seguros vigente (DAGS 23/97/2018)</a></li>
+            <li><a style="display: inline-block; padding:9px; font-size: 16px; text-align: center; text-decoration: none; cursor: pointer; background-color: #00FF7F; color: white; border: none;
+                                                                            border-radius: 10px;" class="boton" href="/ver/seccion2">Dictamen de verificación de instalaciones eléctricas (NOM-005-ASEA-2016, Numeral 5.2.4)</a></li>
+            <li><a style="display: inline-block; padding:9px; font-size: 16px; text-align: center; text-decoration: none; cursor: pointer; background-color: #00FF7F; color: white; border: none;
+                                                                                border-radius: 10px;" class="boton" href="/ver/seccion2">Clave Unica de Registo de Regulado (CURR) (DAGS, Art.8)</a></li>
+            <li><a style="display: inline-block; padding:9px; font-size: 16px; text-align: center; text-decoration: none; cursor: pointer; background-color: #00FF7F; color: white; border: none;
+                                                                                    border-radius: 10px;" class="boton" href="/ver/seccion2">Bitacoras de Operación y Mantenimiento(NOM-005-ASEA-2016, Numeral7.1,8.3 (a,b,c))</a></li>
+            <li><a style="display: inline-block; padding:9px; font-size: 16px; text-align: center; text-decoration: none; cursor: pointer; background-color: #00FF7F; color: white; border: none;
+                                                                                        border-radius: 10px;" class="boton" href="/ver/seccion2">Procedimientos internos de seguridad (NOM-005-ASEA-2016, Numeral 7,7.2.4)</a></li>
+            <ul>
+                <li><a style="display: inline-block; padding:9px; font-size: 16px; text-align: center; text-decoration: none; cursor: pointer; background-color: #00FF7F; color: white; border: none;
+                                                                                                border-radius: 10px;" class="boton" href="/ver/seccion2">Programa de mantenimineto (Numeral 8)</a></li>
+                <li><a style="display: inline-block; padding:9px; font-size: 16px; text-align: center; text-decoration: none; cursor: pointer; background-color: #00FF7F; color: white; border: none;
+                                                                                                    border-radius: 10px;" class="boton" href="/ver/seccion2">Calendario anual de mantenimiento</a></li>
+                <li><a style="display: inline-block; padding:9px; font-size: 16px; text-align: center; text-decoration: none; cursor: pointer; background-color: #00FF7F; color: white; border: none;
+                                                                                                        border-radius: 10px;" class="boton" href="/ver/seccion2">Revisión mensual de mantenimiento (Check List)</a></li>
+                <li><a style="display: inline-block; padding:9px; font-size: 16px; text-align: center; text-decoration: none; cursor: pointer; background-color: #00FF7F; color: white; border: none;
+                                                                                                            border-radius: 10px;" class="boton" href="/ver/seccion2">Programa de detección de fugas y derrames</a></li>
+                <li><a style="display: inline-block; padding:9px; font-size: 16px; text-align: center; text-decoration: none; cursor: pointer; background-color: #00FF7F; color: white; border: none;
+                                                                                                                border-radius: 10px;" class="boton" href="/ver/seccion2">Revisión Mensual de Fugas y derrames (Check List)</a></li>
+                <li><a style="display: inline-block; padding:9px; font-size: 16px; text-align: center; text-decoration: none; cursor: pointer; background-color: #00FF7F; color: white; border: none;
+                                                                                                                    border-radius: 10px;" class="boton" href="/ver/seccion2">Reporte impreso mensal de los tanques, donde se indiquen el nivel de producto y agua</a></li>
+                <li><a style="display: inline-block; padding:9px; font-size: 16px; text-align: center; text-decoration: none; cursor: pointer; background-color: #00FF7F; color: white; border: none;
+                                                                                                                        border-radius: 10px;" class="boton" href="/ver/seccion2">Pozos de Observación (Anexo 4, numeral 3)</a></li>
+            </ul>
+
+        </ol>
         <!-- Agrega más enlaces según tus necesidades -->
     </ul>
 
